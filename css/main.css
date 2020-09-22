@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+.ul {
+  list-style: none;
+  display: inline-flex;
+  border: 5px solid rgba(93, 93, 105, 0.952);
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(152, 252, 252);
+}
+
+.image {
+  text-align: center;
+  width: 200px;
+  height: 150px;
+}
+
+.li {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 5px;
+}

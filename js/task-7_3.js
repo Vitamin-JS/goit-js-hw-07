@@ -31,15 +31,21 @@ const images = [
 const galleryEmptyList = document.querySelector("#gallery");
 
 const makeImagesList = images.map((el) => {
+  const makeListEl = document.createElement("li");
   const makeImgEl = document.createElement("img");
   makeImgEl.alt = el.alt;
   makeImgEl.src = el.url;
-  makeImgEl.width = 200;
-  makeImgEl.height = 150;
+  //   makeImgEl.width = 200;
+  //   makeImgEl.height = 150;
+  makeListEl.append(makeImgEl);
 
-  return makeImgEl;
+  makeListEl.classList.add("li");
+  makeImgEl.classList.add("image");
+
+  return makeListEl;
 });
-// console.log(makeImagesList);
+
+galleryEmptyList.classList.add("ul");
 
 galleryEmptyList.append(...makeImagesList);
 console.log(galleryEmptyList);
