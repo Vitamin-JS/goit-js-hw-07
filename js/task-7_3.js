@@ -27,3 +27,19 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
+const galleryEmptyList = document.querySelector("#gallery");
+
+const makeImagesList = images.map((el) => {
+  const makeImgEl = document.createElement("img");
+  makeImgEl.alt = el.alt;
+  makeImgEl.src = el.url;
+  makeImgEl.width = 200;
+  makeImgEl.height = 150;
+
+  return makeImgEl;
+});
+// console.log(makeImagesList);
+
+galleryEmptyList.append(...makeImagesList);
+console.log(galleryEmptyList);
