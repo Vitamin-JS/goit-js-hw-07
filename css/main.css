@@ -22,3 +22,15 @@ html {
   margin-right: 20px;
   margin-top: 5px;
 }
+
+#validation-input {
+  border: 3px solid rgb(110, 102, 224);
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
