@@ -24,7 +24,7 @@ html {
 }
 
 #validation-input {
-  border: 3px solid rgb(110, 102, 224);
+  border: 3px solid #dbdbdb;
 }
 
 #validation-input.valid {
@@ -34,3 +34,11 @@ html {
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+/* .valid {                 //  если стили в таком виде - бордер не перекрашивается
+  border-color: #4caf50;
+}
+
+.invalid {
+  border-color: #f44336;
+} */
