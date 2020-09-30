@@ -2,13 +2,17 @@
 // (событие input) и изменяет инлайн - стиль span#text обновляя свойство font - size.
 // В результате при перетаскивании ползунка будет меняться размер текста.
 
-{
-  /* <input id="font-size-control" type="range" />
-<br />
-<span id="text">Абракадабра!</span> */
-}
+//  <input id="font-size-control" type="range" />
+// <br />
+// <span id="text">Абракадабра!</span>  */}
 
 const sliderRangeRef = document.querySelector("#font-size-control");
 const fontRef = document.querySelector("#text");
 
-fontChangeResult.addEventListener("change", onInputChange);
+const onInputChange = function (evt) {
+  fontRef.style.fontSize = evt.currentTarget.value + `px`;
+};
+
+console.log(onInputChange.value);
+
+sliderRangeRef.addEventListener("input", onInputChange);
