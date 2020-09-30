@@ -13,6 +13,4 @@ const onInputChange = function (evt) {
   fontRef.style.fontSize = evt.currentTarget.value + `px`;
 };
 
-console.log(onInputChange.value);
-
 sliderRangeRef.addEventListener("input", onInputChange);
