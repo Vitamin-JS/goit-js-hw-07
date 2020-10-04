@@ -26,13 +26,23 @@
 
 const inputRef = document.querySelector("#validation-input");
 
-console.log("Task 7-6    длинна:", inputRef.dataset.length); // Получает свойство data-length '6'
+console.log("Task 7-6  Правильная длинна:", inputRef.dataset.length); // Получает свойство data-length '6'
 
-function onInputBlur() {
-  inputRef.value.length > Number(inputRef.dataset.length) ||
-  inputRef.value.length < Number(inputRef.dataset.length)
-    ? inputRef.classList.add("invalid")
-    : inputRef.classList.replace("invalid", "valid");
-}
+// function onInputBlur() {
+//   inputRef.value.length > Number(inputRef.dataset.length) ||
+//   inputRef.value.length < Number(inputRef.dataset.length)
+//     ? inputRef.classList.add("invalid")
+//     : inputRef.classList.replace("invalid", "valid");
+// }
 
 inputRef.addEventListener("blur", onInputBlur);
+
+function onInputBlur() {
+  if (inputRef.value.length === Number(inputRef.dataset.length)) {
+    inputRef.classList.add("valid");
+    inputRef.classList.remove("invalid");
+  } else {
+    inputRef.classList.add("invalid");
+    inputRef.classList.remove("valid");
+  }
+}
