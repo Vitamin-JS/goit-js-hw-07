@@ -15,11 +15,21 @@ console.log(` В списке ${itemsCount.length} категории`);
 const categoryList = document.querySelector("#categories");
 // console.log(categoryList);    Получает html всего ul-li-li-li
 
-const categoryListArray = categoryList.children; // псевдомассив всех детей ul - 3 элемента li
+const categoryListArray = categoryList.children; // псевдомассив всех детей ul = 3 элемента li
 //console.log(categoryListArray);
-const catgoryArray = Array.from(categoryListArray); // массив всех всех детей ul - 3 элемента li
+const categoryArray = Array.from(categoryListArray); // получаем массив из псевдомассива всех всех детей ul - 3 элемента li
 
-const categoryNameOfArray = catgoryArray.map((element) => {
+// const categoryNameOfArray = categoryArray.map((element) => {
+//   //console.log(element);
+
+//   console.log(element.firstElementChild.textContent); // выводит название категории
+//   console.log(
+//     `Количество элементов: ${element.lastElementChild.children.length}`
+//   ); // выводит кол-во элементов
+// });
+
+// Это же решение через forEach, т.к. нет нелобходимости в новом массиве
+const categoryNameOfArray = categoryArray.forEach((element) => {
   //console.log(element);
 
   console.log(element.firstElementChild.textContent); // выводит название категории
